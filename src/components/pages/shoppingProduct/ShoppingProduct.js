@@ -5,6 +5,7 @@ import ItemTray from "../../molecules/itemsTray/ItemTray";
 import "./ShoppingProduct.css";
 import axios from "axios";
 import { BaseURL } from "../../../BaseURL";
+import Loading from "../../molecules/Loading/Loading";
 
 function ShoppingProduct({ match }) {
   const [productData, setProductData] = useState(null);
@@ -21,18 +22,20 @@ function ShoppingProduct({ match }) {
     fetchData();
   }, [match.params.id]);
 
-  return (
-    productData && (
-      <div className="shoppingProduct">
-        <div className="shoppingProduct__productView">
-          <ShoppingProductImage productData={productData} />
-          <ShoppingProductDesc productData={productData} />
-        </div>
-        <div className="shoppingProduct__suggestion">
-          <ItemTray category={productData && productData.category} />
-        </div>
+  return !productData ? (
+    <div style={{ height: "80vh", display: "flex", alignItems: "center" }}>
+      <Loading />
+    </div>
+  ) : (
+    <div className="shoppingProduct">
+      <div className="shoppingProduct__productView">
+        <ShoppingProductImage productData={productData} />
+        <ShoppingProductDesc productData={productData} />
       </div>
-    )
+      <div className="shoppingProduct__suggestion">
+        <ItemTray category={productData && productData.category} />
+      </div>
+    </div>
   );
 }
 

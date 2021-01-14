@@ -43,7 +43,7 @@ function Header(props) {
             </div>
             <div className="header__name">
               <Link to="/">
-                <p>LIVING DESIRE</p>
+                <p>THE DESIRE HUB</p>
               </Link>
             </div>
           </div>
@@ -94,7 +94,7 @@ function Header(props) {
             )}
           </div>
         </div>
-        <BottomTags />
+        {/* <BottomTags /> */}
       </div>
       <BottomHeader />
     </div>
