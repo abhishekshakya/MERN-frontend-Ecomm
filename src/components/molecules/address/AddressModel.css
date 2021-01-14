@@ -1,0 +1,91 @@
+.addressModal {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  /* filter: blur(1px); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 500ms;
+  /* visibility: hidden; */
+  /* opacity: 0; */
+}
+
+.addressModal__form::before {
+  content: "Address";
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 25%;
+  background-color: black;
+  border-radius: 5px 0 0 5px;
+}
+.addressModal__form {
+  border: 1px solid black;
+  position: relative;
+  background-color: white;
+  height: 40%;
+  width: 50%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.addressModal__form .MuiSvgIcon-root {
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 100ms;
+}
+
+.addressModal__form .MuiSvgIcon-root:active {
+  background-color: gainsboro;
+}
+
+.addressModal__form__inputs {
+  height: 50%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.addressModal__form label {
+  display: flex;
+  align-items: center;
+}
+
+.addressModal input,
+.addressModal textarea {
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  font-size: 18px;
+}
+
+.addressModal__form p {
+  font-size: 21px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.addressModal__form button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 15px;
+}

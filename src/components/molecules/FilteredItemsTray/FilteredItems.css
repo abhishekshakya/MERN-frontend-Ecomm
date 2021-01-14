@@ -1,0 +1,12 @@
+.filteredItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+  column-gap: 3%;
+  row-gap: 2.5vh;
+  z-index: -2;
+  justify-content: center;
+}
+
+.filteredItems :hover {
+  transform: scale(1.02);
+}

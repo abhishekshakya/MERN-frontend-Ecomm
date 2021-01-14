@@ -1,0 +1,126 @@
+.cart {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid black; */
+  margin: auto;
+  margin-bottom: 5%;
+}
+
+.cart__body {
+  /* border: 2px solid black; */
+  display: flex;
+}
+
+.cart__placeOrder {
+  margin-top: 25px;
+  position: sticky;
+  top: 15%;
+  width: 20%;
+  height: 40vh;
+  padding: 10px;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 0px 1px 6px gray;
+  border-radius: 5px;
+}
+
+.cart__placeOrder__subtotal,
+.cart__placeOrder__deliveryCharges,
+.cart__placeOrder__discount,
+.cart__placeOrder__total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__placeOrder__discount :nth-child(2n) {
+  color: #35cb00;
+}
+
+.cart__placeOrder__subtotal :nth-child(2n),
+.cart__placeOrder__deliveryCharges :nth-child(2n),
+.cart__placeOrder__discount :nth-child(2n),
+.cart__placeOrder__total :nth-child(2n) {
+  font-weight: 600;
+}
+
+.cart__placeOrder__subtotal,
+.cart__placeOrder__total {
+  font-size: 21px;
+}
+
+.cart__placeOrder__total {
+  border-top: 2px solid #707070;
+}
+
+.cart__placeOrder__deliveryCharges,
+.cart__placeOrder__discount {
+  font-size: 14px;
+}
+
+.cart__placeOrder__lowerCol {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cart__placeOrder__lowerCol > button {
+  font-size: 20px;
+  padding: 7px 20px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+.cart__placeOrder__lowerCol > a {
+  width: 80%;
+}
+
+.cart__placeOrder__lowerCol > a > button {
+  font-size: 18px;
+  padding: 7px 20px;
+  width: 100%;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.cart__placeOrder__lowerCol button:active {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.726);
+}
+
+.cart__items {
+  flex: 1;
+  /* border: 2px solid black; */
+  padding: 2%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+  row-gap: 25px;
+  column-gap: 3%;
+  justify-content: center;
+}
+.cart__item:hover .smallCard__outer {
+  transform: scale(1.02);
+  /* box-shadow: 0px 0px 10px gray; */
+}
+.cart__item {
+  /* border: 1px solid #5e5c5c; */
+  flex-direction: column;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+  transition: all 150ms;
+}
+
+.cart h2 {
+  text-align: center;
+  color: #5e5c5c;
+}

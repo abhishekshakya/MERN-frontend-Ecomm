@@ -1,0 +1,36 @@
+.loading {
+  width: 100%;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* animation: 1s linear infinite head; */
+  color: #646161;
+}
+.bar {
+  background-color: #4b4747;
+  height: 7px;
+  animation: 200ms ease-in infinite load;
+}
+
+@keyframes load {
+  from {
+    width: 0%;
+    opacity: 0.1;
+  }
+  to {
+    width: 100%;
+    opacity: 0.8;
+  }
+}
+
+@keyframes head {
+  from {
+    /* width: 0%; */
+    opacity: 0.1;
+  }
+  to {
+    /* width: 100%; */
+    opacity: 0.8;
+  }
+}

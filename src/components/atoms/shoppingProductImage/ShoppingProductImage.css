@@ -1,0 +1,130 @@
+.shoppingProductImage {
+  flex: 0.35;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* border: 2px solid black; */
+  /* height: 100%; */
+  overflow: hidden;
+}
+
+.shoppingProductImage__leftPane {
+  flex: 0.3;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.shoppingProductImage__leftPane__up,
+.shoppingProductImage__leftPane__down {
+  cursor: pointer;
+}
+
+.shoppingProductImage__leftPane_smallerPics {
+  /* border: 2px solid black; */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 80%;
+  scroll-behavior: smooth;
+  /* justify-content: center; */
+}
+
+.shoppingProductImage__leftPane_smallerPics :hover {
+  border: 1px solid black;
+  border-radius: 5px;
+  /* transform: scale(1.5); */
+  /* overflow-x: auto; */
+}
+
+/* .shoppingProductImage__leftPane_smallerPics::-webkit-scrollbar {
+  width: 0;
+} */
+
+.shoppingProductImage__leftPane_smallerPics img {
+  object-fit: contain;
+  width: 100%;
+  margin: 2px;
+  margin-bottom: 2px;
+}
+
+.shoppingProductImage__rightPane {
+  position: relative;
+  flex: 0.6;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* border: 2px solid black; */
+}
+
+.shoppingProductImage__rightPane__heart {
+  opacity: 0.8;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 25px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0px 6px 10px 2px rgba(39, 39, 39, 0.6);
+}
+
+.shoppingProductImage__rightPane__image {
+  /* border: 2px solid black; */
+  flex: 0.55;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shoppingProductImage__rightPane__imageController {
+  width: 95%;
+  height: 95%;
+  padding: 3px;
+  /* border: 2px solid green; */
+}
+
+.shoppingProductImage__rightPane__image img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.shoppingProductImage__rightPane__buttons {
+  flex: 0.15;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.shoppingProductImage__rightPane__buttons :active {
+  transform: scale(1.05);
+}
+
+.shoppingProductImage__rightPane__buttons > button {
+  width: 45%;
+  padding: 5%;
+  border: 1px solid black;
+  font-weight: 800;
+  transition: all 250ms;
+}
+
+.shoppingProductImage__rightPane__buttons__addToCart {
+  color: black;
+  background-color: white;
+}
+
+.shoppingProductImage__rightPane__buttons__buyNow {
+  color: white;
+  background-color: black;
+}

@@ -1,0 +1,141 @@
+.header__upper,
+.header__left,
+.header__right,
+.header__search {
+  display: flex;
+  align-items: center;
+  color: #707070;
+  padding: 0 10px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header a {
+  text-decoration: none;
+  color: black;
+}
+.header__combined {
+  box-shadow: 0px 1px 6px 2px lightgray;
+  /* border: 1px solid black; */
+  padding-bottom: 15px;
+  background-color: white;
+}
+
+.header__left__menuIcon,
+.header__logo,
+.header__right__cart,
+.header__right__wishlist {
+  cursor: pointer;
+}
+
+.header__upper {
+  padding: 5px;
+  /* border: 1px solid black; */
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header__left {
+  flex: 0.15;
+  justify-content: flex-start;
+  /* border: 1px solid black; */
+}
+
+.header__logo,
+.header__name {
+  margin-left: 5px;
+}
+
+.header__name p {
+  color: black;
+}
+.header__logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: rgb(207, 207, 207);
+}
+
+.header__search {
+  flex: 0.6;
+  height: 40px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #e2e2e2;
+  /* border: 1px solid black; */
+}
+
+.header__right {
+  flex: 0.25;
+  padding: 10px;
+  justify-content: space-around;
+  /* border: 1px solid black; */
+}
+
+.header__searchInput {
+  flex: 0.95;
+  height: 100%;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  padding: 10px;
+  background-color: #e2e2e2;
+  outline: none;
+  font-size: large;
+  /* font-weight: 520; */
+}
+
+.header__searchIcon {
+  flex: 0.05;
+  cursor: pointer;
+}
+
+.header__right__cart,
+.header__right__wishlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header__right__cart__count,
+.header__right__wishlist__count {
+  position: absolute;
+  top: 2px;
+  left: 20px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  padding-bottom: 22px;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: rgb(243, 28, 28);
+  box-shadow: 1px 2px 8px 0px black;
+}
+
+.header__right button {
+  background: none;
+  border: none;
+  background-color: black;
+  font-size: 13px;
+  color: white;
+  height: fit-content;
+  padding: 5px;
+  border-radius: 7px;
+  cursor: pointer;
+  outline: none;
+}
+
+.header__right span {
+  margin-left: 10px;
+  /* border: 1px solid black; */
+}
+
+/* .header__logo > img {
+  object-fit: contain;
+  width: 70px;
+} */

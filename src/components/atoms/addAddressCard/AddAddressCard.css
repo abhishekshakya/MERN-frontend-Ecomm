@@ -1,0 +1,38 @@
+.addAddressCard {
+  border: 2px solid rgb(173, 186, 199);
+  height: 250px;
+  border-radius: 5px;
+  transition: all 150ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.addAddressCard:not(.address__box__addNew):hover {
+  box-shadow: 3px 3px 5px rgb(199, 199, 199);
+}
+
+.address__box__addNew:active {
+  border: 3px solid rgb(173, 186, 199) !important;
+  box-shadow: 3px 3px 5px rgb(199, 199, 199);
+}
+
+.addAddressCard__address {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.addAddressCard__btns {
+  display: flex;
+  justify-content: space-evenly;
+  color: blue;
+  border-top: 1px solid rgb(173, 186, 199);
+  padding-top: 5px;
+}
+
+.addAddressCard__btns > p:hover {
+  cursor: pointer;
+  font-weight: 500;
+}

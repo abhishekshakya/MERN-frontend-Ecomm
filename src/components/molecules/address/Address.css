@@ -1,0 +1,28 @@
+.address {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 5%;
+}
+
+.address__box {
+  display: grid;
+  justify-content: center;
+  /* border: 2px solid black; */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  column-gap: 10px;
+  row-gap: 10px;
+  padding: 20px;
+}
+
+.address__box__addNew {
+  border: 3px dashed rgb(173, 186, 199) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center !important;
+  color: rgb(173, 186, 199);
+  cursor: pointer;
+  /* color: rgba(87, 87, 87, 0.637); */
+}

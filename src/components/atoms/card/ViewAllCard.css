@@ -1,0 +1,28 @@
+.viewAllCard {
+  cursor: pointer;
+  width: 10vw;
+  height: 14vw;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+  text-transform: capitalize;
+  border: 1px solid lightgray;
+  transition: all 150ms;
+  border-radius: 7px;
+}
+
+.viewAllCard :hover {
+  transform: none;
+}
+
+.viewAllCard__text {
+  display: flex;
+  font-weight: 500;
+  font-size: 25px;
+  align-items: center;
+  width: 80%;
+  color: black;
+  /* border: 2px solid red; */
+  justify-content: space-between;
+}

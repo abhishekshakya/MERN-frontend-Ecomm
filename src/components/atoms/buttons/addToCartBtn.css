@@ -1,0 +1,23 @@
+.addToCartBtn {
+  margin-top: 5px;
+  width: 80%;
+}
+
+.addToCartBtn button {
+  width: 100%;
+  font-size: 12px;
+  border: 1px solid #5e5c5c;
+  background-color: white;
+  font-weight: bold;
+  margin-bottom: 2%;
+  box-shadow: 1px 0px 10px -2px #5e5c5c;
+}
+
+.addToCartBtn :active {
+  background-color: rgb(49, 48, 48);
+  color: white;
+}
+
+/* button {
+  background-color: aqua;
+} */

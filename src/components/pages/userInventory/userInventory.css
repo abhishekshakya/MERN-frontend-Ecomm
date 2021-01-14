@@ -1,0 +1,23 @@
+.inventory {
+  display: flex;
+  border-bottom: 1px solid black;
+  padding: 1%;
+  justify-content: flex-start;
+}
+
+.inventory a {
+  /* margin-right: 7%; */
+  flex: 0.1;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #797979;
+}
+.inventory span {
+  display: inline-block;
+  width: 110%;
+  text-align: center;
+  /* padding: 2px; */
+  /* border: 1px solid black; */
+}

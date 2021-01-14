@@ -1,0 +1,7 @@
+.body {
+  /* background-color: rgb(247, 245, 245); */
+  padding: 10px 6%;
+  /* border: 2px solid black; */
+  z-index: -100;
+  padding-bottom: 10vw;
+}

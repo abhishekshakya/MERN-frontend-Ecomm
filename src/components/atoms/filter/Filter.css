@@ -1,0 +1,46 @@
+.filters {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 18px;
+  /* border: 1px solid black; */
+}
+
+.filters > span {
+  margin: 5% auto;
+}
+
+.filters > span > p {
+  font-weight: bold;
+  display: inline;
+}
+
+.filters ul {
+  list-style: none;
+  /* border: 1px solid black; */
+}
+
+.filter__1 {
+  /* text-align: center; */
+  padding: 5px;
+  width: 60%;
+  margin-bottom: 10%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.filter__1 p {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 5%;
+}
+
+.filter__1 li {
+  margin: 5% 0;
+}
+
+.filter__1 li label {
+  margin: 0 5%;
+}

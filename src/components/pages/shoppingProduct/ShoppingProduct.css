@@ -1,0 +1,14 @@
+.shoppingProduct {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.shoppingProduct__productView {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 80vh; */
+  /* border: 1px solid green; */
+}

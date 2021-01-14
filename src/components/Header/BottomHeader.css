@@ -1,0 +1,34 @@
+.bottomHeader {
+  display: flex;
+  justify-content: space-between;
+  /* position: relative; */
+  margin-top: -10px;
+  padding: 0 10px;
+  color: #707070;
+  z-index: 100;
+  /* border: 1px solid black; */
+}
+
+.bottomHeader__options > ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  /* border: 1px solid black; */
+  padding: 5px;
+  background-color: white;
+  box-shadow: -1px 1px 6px 2px lightgray;
+}
+
+.bottomHeader__options ul :hover {
+  cursor: pointer;
+  color: black;
+  transform: scale(1.1);
+}
+
+.bottomHeader__options li {
+  transition: all 300ms;
+}
+
+.bottomHeader__options {
+  width: 25%;
+}
