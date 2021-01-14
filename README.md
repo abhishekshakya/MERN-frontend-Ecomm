@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Checkout deployed app here: [https://desire-hub-43c87.web.app/]
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
