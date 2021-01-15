@@ -14,11 +14,11 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Contributors][contributors-shield]][https://github.com/abhishekshakya/mern-frontend-ecomm/graphs/contributors]
-[![Forks][forks-shield]][https://github.com/abhishekshakya/mern-frontend-ecomm/network/members]
-[![Stargazers][stars-shield]][https://github.com/abhishekshakya/mern-frontend-ecomm/stargazers]
-[![Issues][issues-shield]][https://github.com/abhishekshakya/mern-frontend-ecomm/issues]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/abhishek-shakya-374042175/]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -176,9 +176,15 @@ Project Link: [https://desire-hub-43c87.web.app/](https://desire-hub-43c87.web.a
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Rishabh-malhotraa/codeforces-diary.svg?style=for-the-badge
-[forks-shield]: https://img.shields.io/github/forks/Rishabh-malhotraa/codeforces-diary.svg?style=for-the-badge
-[stars-shield]: https://img.shields.io/github/stars/Rishabh-malhotraa/codeforces-diary.svg?style=for-the-badge
-[issues-shield]: https://img.shields.io/github/issues/Rishabh-malhotraa/codeforces-diary.svg?style=for-the-badge
-[license-shield]: https://img.shields.io/github/license/Rishabh-malhotraa/codeforces-diary.svg?style=for-the-badge
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/abhishekshakya/MERN-frontend-Ecomm.svg?style=for-the-badge
+[contributors-url]: https://github.com/abhishekshakya/MERN-frontend-Ecomm/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/abhishekshakya/MERN-frontend-Ecomm.svg?style=for-the-badge
+[forks-url]: https://github.com/abhishekshakya/MERN-frontend-Ecomm/network/members
+[stars-shield]: https://img.shields.io/github/stars/abhishekshakya/MERN-frontend-Ecomm.svg?style=for-the-badge
+[stars-url]: https://github.com/abhishekshakya/MERN-frontend-Ecomm/stargazers
+[issues-shield]: https://img.shields.io/github/issues/abhishekshakya/MERN-frontend-Ecomm.svg?style=for-the-badge
+[issues-url]: https://github.com/abhishekshakya/MERN-frontend-Ecomm/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/abhishek-shakya-374042175
