@@ -32,7 +32,7 @@
   <p align="center">
     A website based on MERN stack.
     <br />
-    <a href="https://github.com/abhishekshakya/MERN-frontend-Ecomm/tree/main/srce"><strong>Explore the project »</strong></a>
+    <a href="https://github.com/abhishekshakya/MERN-frontend-Ecomm/tree/main/src"><strong>Explore the project »</strong></a>
     <br />
     <br />
     <a href="https://desire-hub-43c87.web.app/">View Demo</a>
