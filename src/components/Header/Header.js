@@ -14,10 +14,17 @@ import { Link } from "react-router-dom";
 import { removeUser } from "../../redux/user/userActionProvider";
 import { resetCart } from "../../redux/cart/actionProvider";
 import { resetWishlist } from "../../redux/wishlist/wishlistActionProvider";
+import axios from "axios";
+import { BaseURL } from "../../BaseURL";
+import Loading from "../molecules/Loading/Loading";
 
 function Header(props) {
   // const [clicked, setClicked] = useState(false);
   // console.log(typeof props.user);
+  const [loading, setLoading] = React.useState(false);
+  const [options, setOptions] = React.useState([]);
+  // const [choice, setChoice] = React.useState(null);
+  const [textField, setTextField] = React.useState("");
 
   const logoutHandler = () => {
     props.removeUser();
@@ -28,6 +35,29 @@ function Header(props) {
     localStorage.removeItem("_id");
   };
 
+  React.useEffect(() => {
+    setLoading(true);
+    const fetch = async () => {
+      const response = await axios.get(
+        `${BaseURL}/api/query?str=${textField.trim()}`
+      );
+      // console.log(response.data);
+      setOptions(response.data);
+      setLoading(false);
+    };
+    let timer = setTimeout(() => {
+      if (textField.trim()) fetch();
+      else setTextField("");
+    }, 250);
+
+    return timer;
+  }, [textField]);
+
+  const reset = () => {
+    setOptions([]);
+    setTextField("");
+  };
+  // console.log(textField);
   return (
     <div className="header">
       <div className="header__combined">
@@ -52,9 +82,46 @@ function Header(props) {
             <input
               className="header__searchInput"
               type="text"
+              value={textField}
               placeholder="Search"
+              onChange={(e) => setTextField(e.target.value)}
             />
-            <SearchIcon className="header__searchIcon" />
+            <div className="header__searchIcon">
+              <SearchIcon fontSize="large" />
+            </div>
+
+            {textField ? (
+              <div className="header__search__results">
+                {loading ? (
+                  <Loading />
+                ) : (
+                  <>
+                    {options.length === 0 ? (
+                      <p>Sorry not available...</p>
+                    ) : (
+                      <>
+                        {options.map((option) => (
+                          <Link
+                            key={option._id}
+                            to={`/shop/${option._id}`}
+                            onClick={() => reset()}
+                          >
+                            <p>
+                              {option.title}
+                              <span>
+                                <i> (id: {option._id})</i>
+                              </span>
+                            </p>
+                          </Link>
+                        ))}
+                      </>
+                    )}
+                  </>
+                )}
+              </div>
+            ) : (
+              <></>
+            )}
           </div>
 
           <div className="header__right">
