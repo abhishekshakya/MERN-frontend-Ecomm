@@ -12,8 +12,17 @@
   border-radius: 7px;
   min-width: 7%;
   width: 100%;
+  animation: myanimation 1s ease-in;
 }
 
+@keyframes myanimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .smallCard__outer {
   position: relative;
   display: flex;

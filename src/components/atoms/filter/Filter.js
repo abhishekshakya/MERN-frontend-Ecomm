@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Filter.css";
-
+import { useHistory } from "react-router-dom";
 function Filter({ category }) {
   const [filter, setFilter] = useState(category[0]);
+  const history = useHistory();
+  const [categ, setCateg] = category;
 
   const handler = (e) => {
     setFilter(e.target.value);
@@ -10,9 +12,10 @@ function Filter({ category }) {
 
   useEffect(() => {
     // eslint-disable-next-line
-    category[1](filter);
+    setCateg(filter);
+    history.push(`/shopViewAll/${filter}`);
+    // console.log(filter);
   }, [filter]);
-  //   console.log(filter, category);
 
   return (
     <div className="filters">

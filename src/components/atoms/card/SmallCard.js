@@ -10,12 +10,35 @@ import {
 } from "../../../redux/wishlist/wishlistActionProvider";
 
 function SmallCard({
+  hasMore,
+  setPageNo,
+  last,
   payload,
   addToWishList,
   removeFromWishList,
   wishList,
   user,
 }) {
+  // console.log(reference);
+  const reference = React.useRef();
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting && hasMore) setPageNo((page) => page + 1);
+    },
+    { threshold: 0.7 }
+  );
+
+  React.useEffect(() => {
+    if (last) {
+      observer.observe(reference.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [last]);
+
   const [favorite, setFavorite] = useState(
     wishList.find((element) => element._id === payload._id)
   );
@@ -38,7 +61,7 @@ function SmallCard({
   };
 
   return (
-    <div className="smallCard__outer">
+    <div className="smallCard__outer" ref={reference}>
       <div className="smallCard__heart" onClick={favoriteHandler}>
         {favorite && user ? (
           <FavoriteIcon color="error" />

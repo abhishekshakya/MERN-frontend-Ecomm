@@ -143,8 +143,8 @@ See the [open issues](https://github.com/abhishekshakya/mern-frontend-ecomm/issu
 - [x] fetch cart, address, wishlist details on every page relod
 - [x] add loading animation if data is not availiable yet
 - [x] make search bar functional
-- [ ] add pagination
-- [ ] infinite scrolling (not quite sure)
+- [x] add pagination
+- [x] infinite scrolling (not quite sure)
 - [ ] add panel for adding products (without using postman)
 - [ ] add payment gateway (not quite sure)
 

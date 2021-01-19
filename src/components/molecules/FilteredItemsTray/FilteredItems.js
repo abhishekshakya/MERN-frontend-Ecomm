@@ -7,43 +7,73 @@ import Loading from "../Loading/Loading";
 
 function FilteredItems({ category }) {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [hasMore, setHasMore] = useState(true);
+  const [pageNo, setPageNo] = useState(1);
+
+  useEffect(() => {
+    setPageNo(1);
+    setHasMore(true);
+    setProducts([]);
+  }, [category]);
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
+      // console.log("useEffect called", hasMore);
       if (category !== "all") {
-        const response = await axios.get(`${BaseURL}/api/search/${category}`);
-        // console.log(response.data);
-        setProducts(response.data);
+        if (hasMore) {
+          const response = await axios.get(
+            `${BaseURL}/pagination/${category}?pageNo=${pageNo}&itemCount=18`
+          );
+          setProducts((products) => [...products, ...response.data]);
+          if (response.data.length === 0) {
+            setHasMore(false);
+          }
+        }
       } else {
-        const response = await axios.get(`${BaseURL}/api/items`);
-        // console.log(response.data);
-        setProducts(response.data);
+        if (hasMore) {
+          const response = await axios.get(
+            `${BaseURL}/pagination?pageNo=${pageNo}&itemCount=18`
+          );
+          setProducts((products) => [...products, ...response.data]);
+          if (response.data.length === 0) {
+            setHasMore(false);
+          }
+        }
+        setLoading(false);
       }
     };
     fetchData();
-  }, [category]);
+  }, [pageNo, hasMore, category]);
 
-  const lastElementHandler = (node) => {
-    console.log(node);
-  };
+  // console.log(category);
 
-  return products.length !== 0 ? (
-    <div className="filteredItems">
-      {products.map((product, i) => {
-        if (i !== product.length - 1)
-          return <SmallCard key={product._id} payload={product} />;
-        else
-          return (
-            <SmallCard
-              ref={lastElementHandler}
-              key={product._id}
-              payload={product}
-            />
-          );
-      })}
-    </div>
-  ) : (
-    <Loading />
+  return (
+    <>
+      {products.length !== 0 ? (
+        <div className="filteredItems">
+          {products.map((product, i) => {
+            if (i !== products.length - 1) {
+              // console.log(i, products.length);
+              return <SmallCard key={product._id} payload={product} />;
+            } else
+              return (
+                <SmallCard
+                  key={product._id}
+                  payload={product}
+                  setPageNo={setPageNo}
+                  last
+                  hasMore
+                />
+              );
+          })}
+        </div>
+      ) : (
+        <></>
+      )}
+      {loading ? <Loading /> : <></>}
+    </>
   );
 }
 
