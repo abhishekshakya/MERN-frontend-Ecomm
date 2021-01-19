@@ -41,8 +41,8 @@ function FilteredItems({ category }) {
             setHasMore(false);
           }
         }
-        setLoading(false);
       }
+      setLoading(false);
     };
     fetchData();
   }, [pageNo, hasMore, category]);
