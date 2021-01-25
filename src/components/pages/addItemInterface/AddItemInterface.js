@@ -115,7 +115,7 @@ function AddItemInterface({ user }) {
                 </option>
                 <option value="Bedsheets"> Bedsheets</option>
                 <option value="T-Shirts"> T-Shirts</option>
-                <option value="AudiCurtains"> AudiCurtains</option>
+                <option value="Curtains"> Curtains</option>
                 <option value="Clothes"> Clothes</option>
                 <option value="Mugs"> Mugs</option>
               </select>
