@@ -1,0 +1,101 @@
+.addItemInterface {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid black; */
+  margin: auto;
+  margin-bottom: 5%;
+  min-height: 100vh;
+}
+
+.addItemInterface h2 {
+  text-align: center;
+  color: #5e5c5c;
+}
+
+.addItemInterface__body {
+  border: 1px solid black;
+  position: relative;
+  border-radius: 5px;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.377); */
+  padding-top: 15px;
+}
+
+.addItemInterface__form {
+  /* border: 2px solid black; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.addItemInterface__form > label {
+  display: flex;
+  margin-top: 2vh;
+  align-items: center;
+}
+
+.addItemInterface__form > label > input:not(.notnot),
+.addItemInterface__form > label > select {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-bottom: 2px solid black;
+}
+
+.notnot {
+  flex: 0.92;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-bottom: 2px solid black;
+}
+
+.addItemInterface__form > label > p {
+  flex: 0.5;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.addItemInterface__description {
+  margin: 5px;
+  width: 50%;
+}
+
+.addItemInterface__description p {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid black; */
+  font-size: 18px;
+  font-weight: 400;
+  color: #5e5c5c;
+}
+
+.addItemInterface__add {
+  position: absolute;
+  top: 7%;
+  left: 3%;
+  height: 4vw;
+  width: 4vw;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  font-size: 25px;
+  font-weight: 500;
+  transition: all 120ms;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.addItemInterface__add:active {
+  border-radius: 50%;
+  opacity: 0.9;
+  box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.377);
+}

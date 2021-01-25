@@ -5,6 +5,7 @@
   /* border: 2px solid black; */
   margin: auto;
   margin-bottom: 5%;
+  min-height: 100vh;
 }
 
 .wishlist__items {

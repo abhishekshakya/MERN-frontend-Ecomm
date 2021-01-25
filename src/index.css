@@ -20,6 +20,20 @@ a {
   background: #c7c5c5;
   opacity: 0.2;
 }
+/* .loading > h1 {
+  visibility: hidden;
+} */
+
+.error {
+  margin-top: 5px;
+  background-color: rgb(243, 28, 28);
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 body {
   /* background-color: rgb(247, 245, 245); */
   margin: 0;

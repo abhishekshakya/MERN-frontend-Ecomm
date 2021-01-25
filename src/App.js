@@ -13,6 +13,7 @@ import AuthRouter from "./components/pages/login/AuthRouter";
 import { connect } from "react-redux";
 import { IconButton } from "@material-ui/core";
 import { Close } from "@material-ui/icons";
+import AddItemInterface from "./components/pages/addItemInterface/AddItemInterface";
 
 function App({ user }) {
   console.log(user);
@@ -25,6 +26,11 @@ function App({ user }) {
           <Route path="/inventory/wishlist" exact component={Wishlist} />
           <Route path="/inventory/address" exact component={Address} />
           <Route path="/inventory/cart" exact component={Cart} />
+          <Route
+            path="/inventory/addItemInterface"
+            exact
+            component={AddItemInterface}
+          />
           <Route path="/shopViewAll/:category" component={ShopViewAll} />
           <Route path="/shop/:id" component={ShoppingProduct} />
           <Route path="/" component={Body} />

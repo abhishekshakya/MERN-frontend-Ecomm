@@ -23,6 +23,11 @@ function UserInventory({ match }) {
       <Link to="/inventory/address">
         <span style={location === "address" ? style : {}}>My Address</span>
       </Link>
+      <Link to="/inventory/addItemInterface">
+        <span style={location === "addItemInterface" ? style : {}}>
+          Sell Products
+        </span>
+      </Link>
     </div>
   );
 }

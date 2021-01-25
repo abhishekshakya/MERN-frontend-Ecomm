@@ -16,7 +16,7 @@ import { getAddressDB } from "./address/adressActionProvider";
 
 const checkForToken = async () => {
   const token = localStorage.getItem("token");
-  const name = localStorage.getItem("name");
+  // const name = localStorage.getItem("name");
   const _id = localStorage.getItem("_id");
   try {
     if (!token) {
@@ -27,9 +27,9 @@ const checkForToken = async () => {
         auth_token: `Bearer ${token}`,
       },
     });
-    console.log(res.data);
-    console.log("hit response");
-    store.dispatch(addUser({ token, name, _id }));
+    // console.log(res.data);
+    // console.log("hit response");
+    store.dispatch(addUser(res.data));
 
     res.data[0].cart.forEach(async (elem) => {
       const data = await axios.get(`${BaseURL}/api/item/${elem}`);

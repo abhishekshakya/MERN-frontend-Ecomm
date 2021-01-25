@@ -36,8 +36,11 @@
     <br />
     <br />
     <a href="https://desire-hub-43c87.web.app/">View Demo</a>
-    ·
+    [dont mind if items take some time to load, its heroku policy to put app on sleep if there is no traffic and it takes a little while(5-6 secs) to put things back on work]
     <a href="https://github.com/abhishekshakya/mern-frontend-ecomm/issues">Report Bug</a>
+    <br/>
+    <br/>
+    contact me if you want to use admin rights of webiste
   </p>
 </p>
 
@@ -144,8 +147,10 @@ See the [open issues](https://github.com/abhishekshakya/mern-frontend-ecomm/issu
 - [x] add loading animation if data is not availiable yet
 - [x] make search bar functional
 - [x] add pagination
-- [x] infinite scrolling (not quite sure)
-- [ ] add panel for adding products (without using postman)
+- [x] infinite scrolling
+- [x] add panel for adding products
+- [x] add red divs when there is an error on adding item on database
+- [ ] added delete icon with every product availiable & visible only for admin to delete product from store
 - [ ] add payment gateway (not quite sure)
 
 <!-- CONTRIBUTING -->

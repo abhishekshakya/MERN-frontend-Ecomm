@@ -10,5 +10,31 @@
   align-items: center;
   justify-content: center;
   /* height: 80vh; */
-  /* border: 1px solid green; */
+}
+
+.deleteIcon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+  width: 200px;
+}
+
+.deleteIcon > button {
+  border: 2px solid black;
+}
+
+.deleteIcon:hover::after {
+  background-color: rgb(0, 0, 0, 0.6);
+  color: white;
+  position: absolute;
+  padding: 2px;
+  border-radius: 2px;
+  bottom: -45px;
+  left: 0;
+  content: "delete this product from database";
+  width: 100%;
+  text-align: center;
 }

@@ -4,6 +4,12 @@
   flex-direction: column;
   margin: auto;
   margin-bottom: 5%;
+  min-height: 100vh;
+}
+
+.address h2 {
+  text-align: center;
+  color: #5e5c5c;
 }
 
 .address__box {

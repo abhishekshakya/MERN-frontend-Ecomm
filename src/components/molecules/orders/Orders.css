@@ -5,4 +5,10 @@
   /* border: 2px solid black; */
   margin: auto;
   margin-bottom: 5%;
+  min-height: 100vh;
+}
+
+.orders h2 {
+  text-align: center;
+  color: #5e5c5c;
 }
