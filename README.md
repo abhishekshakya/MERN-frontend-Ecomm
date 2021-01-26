@@ -150,7 +150,7 @@ See the [open issues](https://github.com/abhishekshakya/mern-frontend-ecomm/issu
 - [x] infinite scrolling
 - [x] add panel for adding products
 - [x] add red divs when there is an error on adding item on database
-- [ ] added delete icon with every product availiable & visible only for admin to delete product from store
+- [x] added delete icon with every product availiable & visible only for admin to delete product from store
 - [ ] add payment gateway (not quite sure)
 
 <!-- CONTRIBUTING -->

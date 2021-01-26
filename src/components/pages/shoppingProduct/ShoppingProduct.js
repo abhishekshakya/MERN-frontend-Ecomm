@@ -25,6 +25,7 @@ function ShoppingProduct({ match, user }) {
       }, 2000);
       return;
     }
+    const _id = localStorage.getItem("_id");
     // console.log("deleted");
     const token = localStorage.getItem("token");
     const deleteData = async () => {
@@ -33,10 +34,12 @@ function ShoppingProduct({ match, user }) {
           auth_token: `Bearer ${token}`,
         },
         data: {
-          _id: productData._id,
+          item_id: productData._id,
+          _id,
         },
       });
       useHist.push("/");
+      useHist.go(0);
     };
     deleteData();
   };
